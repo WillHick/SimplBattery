@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplBattery", "SimpleBattery\SimplBattery.csproj", "{49329B25-8BCB-4F04-903A-18610CD50A4B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49329B25-8BCB-4F04-903A-18610CD50A4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49329B25-8BCB-4F04-903A-18610CD50A4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49329B25-8BCB-4F04-903A-18610CD50A4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49329B25-8BCB-4F04-903A-18610CD50A4B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E8E48E5-7AC9-405F-A63E-71D65F2E7B71}
+	EndGlobalSection
+EndGlobal
