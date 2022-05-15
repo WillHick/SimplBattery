@@ -1,5 +1,5 @@
 # SimplBattery
-A Windows 10 Tool Featuring Widgets Off Battery Information And Percentage Alerts
+A Windows 10 Tool Featuring Widgets Containing Battery Information And Percentage Alerts 
 
 # Features
 SimplBattery has a few features which are all toggleable from the main application such as 2 widgets (A Visual Battery and A Percentage) that are moveable and changeable.
