@@ -39,6 +39,7 @@ namespace SimplBattery
             this.BatteryBar.Location = new System.Drawing.Point(-2, -1);
             this.BatteryBar.Name = "BatteryBar";
             this.BatteryBar.Size = new System.Drawing.Size(229, 111);
+            this.BatteryBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.BatteryBar.TabIndex = 0;
             // 
             // UpdateBattery

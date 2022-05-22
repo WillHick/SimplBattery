@@ -29,19 +29,36 @@ namespace SimpleBattery
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.VisBatteryHeader = new System.Windows.Forms.Label();
             this.NumBatteryHeader = new System.Windows.Forms.Label();
             this.UIHeader = new System.Windows.Forms.Label();
             this.Github = new System.Windows.Forms.Button();
             this.Restart = new System.Windows.Forms.Button();
             this.Alerts = new System.Windows.Forms.Label();
-            this.AlertHeader = new System.Windows.Forms.Label();
+            this.Header25 = new System.Windows.Forms.Label();
             this.Widgets = new System.Windows.Forms.Label();
             this.More = new System.Windows.Forms.Label();
-            this.AlertToggle = new System.Windows.Forms.Button();
+            this.Toggle25 = new System.Windows.Forms.Button();
             this.ToggleNumBattery = new System.Windows.Forms.Button();
             this.ToggleVisualBattery = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
+            this.Help = new System.Windows.Forms.Button();
+            this.ToggleChargeStatus = new System.Windows.Forms.Button();
+            this.CharBatteryHeader = new System.Windows.Forms.Label();
+            this.Toggle50 = new System.Windows.Forms.Button();
+            this.Header50 = new System.Windows.Forms.Label();
+            this.Toggle75 = new System.Windows.Forms.Button();
+            this.Header75 = new System.Windows.Forms.Label();
+            this.Toggle100 = new System.Windows.Forms.Button();
+            this.Header100 = new System.Windows.Forms.Label();
+            this.AlertChecks = new System.Windows.Forms.Timer(this.components);
+            this.ToggleRemain = new System.Windows.Forms.Button();
+            this.RemainHeader = new System.Windows.Forms.Label();
+            this.ToggleEnableAlerts = new System.Windows.Forms.Button();
+            this.AlertsEnableHeader = new System.Windows.Forms.Label();
+            this.HomePercent = new System.Windows.Forms.Label();
+            this.GetPercent = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // VisBatteryHeader
@@ -49,7 +66,7 @@ namespace SimpleBattery
             this.VisBatteryHeader.AutoSize = true;
             this.VisBatteryHeader.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.VisBatteryHeader.ForeColor = System.Drawing.Color.White;
-            this.VisBatteryHeader.Location = new System.Drawing.Point(19, 221);
+            this.VisBatteryHeader.Location = new System.Drawing.Point(353, 147);
             this.VisBatteryHeader.Name = "VisBatteryHeader";
             this.VisBatteryHeader.Size = new System.Drawing.Size(159, 30);
             this.VisBatteryHeader.TabIndex = 47;
@@ -60,7 +77,7 @@ namespace SimpleBattery
             this.NumBatteryHeader.AutoSize = true;
             this.NumBatteryHeader.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.NumBatteryHeader.ForeColor = System.Drawing.Color.White;
-            this.NumBatteryHeader.Location = new System.Drawing.Point(19, 168);
+            this.NumBatteryHeader.Location = new System.Drawing.Point(353, 92);
             this.NumBatteryHeader.Name = "NumBatteryHeader";
             this.NumBatteryHeader.Size = new System.Drawing.Size(247, 30);
             this.NumBatteryHeader.TabIndex = 45;
@@ -86,7 +103,7 @@ namespace SimpleBattery
             this.Github.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Github.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.Github.ForeColor = System.Drawing.Color.White;
-            this.Github.Location = new System.Drawing.Point(312, 293);
+            this.Github.Location = new System.Drawing.Point(264, 362);
             this.Github.Name = "Github";
             this.Github.Size = new System.Drawing.Size(94, 45);
             this.Github.TabIndex = 51;
@@ -103,7 +120,7 @@ namespace SimpleBattery
             this.Restart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Restart.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.Restart.ForeColor = System.Drawing.Color.White;
-            this.Restart.Location = new System.Drawing.Point(15, 293);
+            this.Restart.Location = new System.Drawing.Point(15, 362);
             this.Restart.Name = "Restart";
             this.Restart.Size = new System.Drawing.Size(96, 45);
             this.Restart.TabIndex = 50;
@@ -119,27 +136,27 @@ namespace SimpleBattery
             this.Alerts.ForeColor = System.Drawing.Color.Gray;
             this.Alerts.Location = new System.Drawing.Point(19, 63);
             this.Alerts.Name = "Alerts";
-            this.Alerts.Size = new System.Drawing.Size(63, 25);
+            this.Alerts.Size = new System.Drawing.Size(132, 25);
             this.Alerts.TabIndex = 52;
-            this.Alerts.Text = "Alerts";
+            this.Alerts.Text = "Battery Alerts";
             // 
-            // AlertHeader
+            // Header25
             // 
-            this.AlertHeader.AutoSize = true;
-            this.AlertHeader.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.AlertHeader.ForeColor = System.Drawing.Color.White;
-            this.AlertHeader.Location = new System.Drawing.Point(19, 92);
-            this.AlertHeader.Name = "AlertHeader";
-            this.AlertHeader.Size = new System.Drawing.Size(159, 30);
-            this.AlertHeader.TabIndex = 53;
-            this.AlertHeader.Text = "Battery Alerts";
+            this.Header25.AutoSize = true;
+            this.Header25.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.Header25.ForeColor = System.Drawing.Color.White;
+            this.Header25.Location = new System.Drawing.Point(19, 143);
+            this.Header25.Name = "Header25";
+            this.Header25.Size = new System.Drawing.Size(142, 30);
+            this.Header25.TabIndex = 53;
+            this.Header25.Text = "25% Battery";
             // 
             // Widgets
             // 
             this.Widgets.AutoSize = true;
             this.Widgets.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.Widgets.ForeColor = System.Drawing.Color.Gray;
-            this.Widgets.Location = new System.Drawing.Point(19, 137);
+            this.Widgets.Location = new System.Drawing.Point(353, 63);
             this.Widgets.Name = "Widgets";
             this.Widgets.Size = new System.Drawing.Size(82, 25);
             this.Widgets.TabIndex = 55;
@@ -150,25 +167,25 @@ namespace SimpleBattery
             this.More.AutoSize = true;
             this.More.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.More.ForeColor = System.Drawing.Color.Gray;
-            this.More.Location = new System.Drawing.Point(19, 266);
+            this.More.Location = new System.Drawing.Point(19, 339);
             this.More.Name = "More";
             this.More.Size = new System.Drawing.Size(57, 25);
             this.More.TabIndex = 56;
             this.More.Text = "More";
             // 
-            // AlertToggle
+            // Toggle25
             // 
-            this.AlertToggle.BackgroundImage = global::SimplBattery.Properties.Resources.icons8_toggle_off_96;
-            this.AlertToggle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.AlertToggle.FlatAppearance.BorderSize = 0;
-            this.AlertToggle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.AlertToggle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AlertToggle.Location = new System.Drawing.Point(341, 86);
-            this.AlertToggle.Name = "AlertToggle";
-            this.AlertToggle.Size = new System.Drawing.Size(49, 49);
-            this.AlertToggle.TabIndex = 54;
-            this.AlertToggle.UseVisualStyleBackColor = true;
-            this.AlertToggle.Click += new System.EventHandler(this.AlertToggle_Click);
+            this.Toggle25.BackgroundImage = global::SimplBattery.Properties.Resources.icons8_toggle_off_96;
+            this.Toggle25.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Toggle25.FlatAppearance.BorderSize = 0;
+            this.Toggle25.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.Toggle25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Toggle25.Location = new System.Drawing.Point(269, 137);
+            this.Toggle25.Name = "Toggle25";
+            this.Toggle25.Size = new System.Drawing.Size(49, 49);
+            this.Toggle25.TabIndex = 54;
+            this.Toggle25.UseVisualStyleBackColor = true;
+            this.Toggle25.Click += new System.EventHandler(this.AlertToggle_Click);
             // 
             // ToggleNumBattery
             // 
@@ -177,7 +194,7 @@ namespace SimpleBattery
             this.ToggleNumBattery.FlatAppearance.BorderSize = 0;
             this.ToggleNumBattery.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.ToggleNumBattery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ToggleNumBattery.Location = new System.Drawing.Point(341, 162);
+            this.ToggleNumBattery.Location = new System.Drawing.Point(653, 86);
             this.ToggleNumBattery.Name = "ToggleNumBattery";
             this.ToggleNumBattery.Size = new System.Drawing.Size(49, 49);
             this.ToggleNumBattery.TabIndex = 48;
@@ -191,7 +208,7 @@ namespace SimpleBattery
             this.ToggleVisualBattery.FlatAppearance.BorderSize = 0;
             this.ToggleVisualBattery.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.ToggleVisualBattery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ToggleVisualBattery.Location = new System.Drawing.Point(341, 212);
+            this.ToggleVisualBattery.Location = new System.Drawing.Point(653, 139);
             this.ToggleVisualBattery.Name = "ToggleVisualBattery";
             this.ToggleVisualBattery.Size = new System.Drawing.Size(49, 49);
             this.ToggleVisualBattery.TabIndex = 46;
@@ -207,7 +224,7 @@ namespace SimpleBattery
             this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Exit.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.Exit.ForeColor = System.Drawing.Color.White;
-            this.Exit.Location = new System.Drawing.Point(117, 293);
+            this.Exit.Location = new System.Drawing.Point(117, 362);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(63, 45);
             this.Exit.TabIndex = 57;
@@ -216,17 +233,214 @@ namespace SimpleBattery
             this.Exit.UseVisualStyleBackColor = true;
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
+            // Help
+            // 
+            this.Help.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
+            this.Help.FlatAppearance.BorderSize = 0;
+            this.Help.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
+            this.Help.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
+            this.Help.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Help.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.Help.ForeColor = System.Drawing.Color.White;
+            this.Help.Location = new System.Drawing.Point(186, 362);
+            this.Help.Name = "Help";
+            this.Help.Size = new System.Drawing.Size(80, 45);
+            this.Help.TabIndex = 58;
+            this.Help.Text = "Help";
+            this.Help.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Help.UseVisualStyleBackColor = true;
+            this.Help.Click += new System.EventHandler(this.Help_Click);
+            // 
+            // ToggleChargeStatus
+            // 
+            this.ToggleChargeStatus.BackgroundImage = global::SimplBattery.Properties.Resources.icons8_toggle_off_96;
+            this.ToggleChargeStatus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ToggleChargeStatus.FlatAppearance.BorderSize = 0;
+            this.ToggleChargeStatus.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.ToggleChargeStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ToggleChargeStatus.Location = new System.Drawing.Point(653, 190);
+            this.ToggleChargeStatus.Name = "ToggleChargeStatus";
+            this.ToggleChargeStatus.Size = new System.Drawing.Size(49, 49);
+            this.ToggleChargeStatus.TabIndex = 59;
+            this.ToggleChargeStatus.UseVisualStyleBackColor = true;
+            // 
+            // CharBatteryHeader
+            // 
+            this.CharBatteryHeader.AutoSize = true;
+            this.CharBatteryHeader.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.CharBatteryHeader.ForeColor = System.Drawing.Color.White;
+            this.CharBatteryHeader.Location = new System.Drawing.Point(353, 198);
+            this.CharBatteryHeader.Name = "CharBatteryHeader";
+            this.CharBatteryHeader.Size = new System.Drawing.Size(157, 30);
+            this.CharBatteryHeader.TabIndex = 60;
+            this.CharBatteryHeader.Text = "Charge Status";
+            // 
+            // Toggle50
+            // 
+            this.Toggle50.BackgroundImage = global::SimplBattery.Properties.Resources.icons8_toggle_off_96;
+            this.Toggle50.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Toggle50.FlatAppearance.BorderSize = 0;
+            this.Toggle50.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.Toggle50.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Toggle50.Location = new System.Drawing.Point(269, 190);
+            this.Toggle50.Name = "Toggle50";
+            this.Toggle50.Size = new System.Drawing.Size(49, 49);
+            this.Toggle50.TabIndex = 62;
+            this.Toggle50.UseVisualStyleBackColor = true;
+            // 
+            // Header50
+            // 
+            this.Header50.AutoSize = true;
+            this.Header50.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.Header50.ForeColor = System.Drawing.Color.White;
+            this.Header50.Location = new System.Drawing.Point(19, 196);
+            this.Header50.Name = "Header50";
+            this.Header50.Size = new System.Drawing.Size(142, 30);
+            this.Header50.TabIndex = 61;
+            this.Header50.Text = "50% Battery";
+            // 
+            // Toggle75
+            // 
+            this.Toggle75.BackgroundImage = global::SimplBattery.Properties.Resources.icons8_toggle_off_96;
+            this.Toggle75.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Toggle75.FlatAppearance.BorderSize = 0;
+            this.Toggle75.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.Toggle75.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Toggle75.Location = new System.Drawing.Point(269, 241);
+            this.Toggle75.Name = "Toggle75";
+            this.Toggle75.Size = new System.Drawing.Size(49, 49);
+            this.Toggle75.TabIndex = 64;
+            this.Toggle75.UseVisualStyleBackColor = true;
+            // 
+            // Header75
+            // 
+            this.Header75.AutoSize = true;
+            this.Header75.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.Header75.ForeColor = System.Drawing.Color.White;
+            this.Header75.Location = new System.Drawing.Point(19, 247);
+            this.Header75.Name = "Header75";
+            this.Header75.Size = new System.Drawing.Size(142, 30);
+            this.Header75.TabIndex = 63;
+            this.Header75.Text = "75% Battery";
+            // 
+            // Toggle100
+            // 
+            this.Toggle100.BackgroundImage = global::SimplBattery.Properties.Resources.icons8_toggle_off_96;
+            this.Toggle100.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Toggle100.FlatAppearance.BorderSize = 0;
+            this.Toggle100.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.Toggle100.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Toggle100.Location = new System.Drawing.Point(269, 290);
+            this.Toggle100.Name = "Toggle100";
+            this.Toggle100.Size = new System.Drawing.Size(49, 49);
+            this.Toggle100.TabIndex = 66;
+            this.Toggle100.UseVisualStyleBackColor = true;
+            // 
+            // Header100
+            // 
+            this.Header100.AutoSize = true;
+            this.Header100.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.Header100.ForeColor = System.Drawing.Color.White;
+            this.Header100.Location = new System.Drawing.Point(19, 296);
+            this.Header100.Name = "Header100";
+            this.Header100.Size = new System.Drawing.Size(155, 30);
+            this.Header100.TabIndex = 65;
+            this.Header100.Text = "100% Battery";
+            // 
+            // AlertChecks
+            // 
+            this.AlertChecks.Interval = 1;
+            this.AlertChecks.Tick += new System.EventHandler(this.AlertChecks_Tick);
+            // 
+            // ToggleRemain
+            // 
+            this.ToggleRemain.BackgroundImage = global::SimplBattery.Properties.Resources.icons8_toggle_off_96;
+            this.ToggleRemain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ToggleRemain.FlatAppearance.BorderSize = 0;
+            this.ToggleRemain.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.ToggleRemain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ToggleRemain.Location = new System.Drawing.Point(653, 239);
+            this.ToggleRemain.Name = "ToggleRemain";
+            this.ToggleRemain.Size = new System.Drawing.Size(49, 49);
+            this.ToggleRemain.TabIndex = 67;
+            this.ToggleRemain.UseVisualStyleBackColor = true;
+            // 
+            // RemainHeader
+            // 
+            this.RemainHeader.AutoSize = true;
+            this.RemainHeader.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.RemainHeader.ForeColor = System.Drawing.Color.White;
+            this.RemainHeader.Location = new System.Drawing.Point(353, 247);
+            this.RemainHeader.Name = "RemainHeader";
+            this.RemainHeader.Size = new System.Drawing.Size(206, 30);
+            this.RemainHeader.TabIndex = 68;
+            this.RemainHeader.Text = "Remaining Battery";
+            // 
+            // ToggleEnableAlerts
+            // 
+            this.ToggleEnableAlerts.BackgroundImage = global::SimplBattery.Properties.Resources.icons8_toggle_on_96;
+            this.ToggleEnableAlerts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ToggleEnableAlerts.FlatAppearance.BorderSize = 0;
+            this.ToggleEnableAlerts.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.ToggleEnableAlerts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ToggleEnableAlerts.Location = new System.Drawing.Point(269, 86);
+            this.ToggleEnableAlerts.Name = "ToggleEnableAlerts";
+            this.ToggleEnableAlerts.Size = new System.Drawing.Size(49, 49);
+            this.ToggleEnableAlerts.TabIndex = 70;
+            this.ToggleEnableAlerts.UseVisualStyleBackColor = true;
+            // 
+            // AlertsEnableHeader
+            // 
+            this.AlertsEnableHeader.AutoSize = true;
+            this.AlertsEnableHeader.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.AlertsEnableHeader.ForeColor = System.Drawing.Color.White;
+            this.AlertsEnableHeader.Location = new System.Drawing.Point(19, 92);
+            this.AlertsEnableHeader.Name = "AlertsEnableHeader";
+            this.AlertsEnableHeader.Size = new System.Drawing.Size(150, 30);
+            this.AlertsEnableHeader.TabIndex = 69;
+            this.AlertsEnableHeader.Text = "Enable Alerts";
+            // 
+            // HomePercent
+            // 
+            this.HomePercent.AutoSize = true;
+            this.HomePercent.Font = new System.Drawing.Font("Segoe UI", 35F, System.Drawing.FontStyle.Bold);
+            this.HomePercent.ForeColor = System.Drawing.Color.White;
+            this.HomePercent.Location = new System.Drawing.Point(549, 316);
+            this.HomePercent.Name = "HomePercent";
+            this.HomePercent.Size = new System.Drawing.Size(221, 93);
+            this.HomePercent.TabIndex = 71;
+            this.HomePercent.Text = "100%";
+            // 
+            // GetPercent
+            // 
+            this.GetPercent.Interval = 1;
+            this.GetPercent.Tick += new System.EventHandler(this.GetPercent_Tick);
+            // 
             // UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
-            this.ClientSize = new System.Drawing.Size(416, 352);
+            this.ClientSize = new System.Drawing.Size(724, 422);
+            this.Controls.Add(this.HomePercent);
+            this.Controls.Add(this.ToggleEnableAlerts);
+            this.Controls.Add(this.AlertsEnableHeader);
+            this.Controls.Add(this.ToggleRemain);
+            this.Controls.Add(this.RemainHeader);
+            this.Controls.Add(this.Toggle100);
+            this.Controls.Add(this.Header100);
+            this.Controls.Add(this.Toggle75);
+            this.Controls.Add(this.Header75);
+            this.Controls.Add(this.Toggle50);
+            this.Controls.Add(this.Header50);
+            this.Controls.Add(this.ToggleChargeStatus);
+            this.Controls.Add(this.CharBatteryHeader);
+            this.Controls.Add(this.Help);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.More);
             this.Controls.Add(this.Widgets);
-            this.Controls.Add(this.AlertToggle);
-            this.Controls.Add(this.AlertHeader);
+            this.Controls.Add(this.Toggle25);
+            this.Controls.Add(this.Header25);
             this.Controls.Add(this.Alerts);
             this.Controls.Add(this.Github);
             this.Controls.Add(this.Restart);
@@ -257,11 +471,27 @@ namespace SimpleBattery
         private System.Windows.Forms.Button Github;
         private System.Windows.Forms.Button Restart;
         private System.Windows.Forms.Label Alerts;
-        private System.Windows.Forms.Button AlertToggle;
-        private System.Windows.Forms.Label AlertHeader;
+        private System.Windows.Forms.Button Toggle25;
+        private System.Windows.Forms.Label Header25;
         private System.Windows.Forms.Label Widgets;
         private System.Windows.Forms.Label More;
         private System.Windows.Forms.Button Exit;
+        private System.Windows.Forms.Button Help;
+        private System.Windows.Forms.Button ToggleChargeStatus;
+        private System.Windows.Forms.Label CharBatteryHeader;
+        private System.Windows.Forms.Button Toggle50;
+        private System.Windows.Forms.Label Header50;
+        private System.Windows.Forms.Button Toggle75;
+        private System.Windows.Forms.Label Header75;
+        private System.Windows.Forms.Button Toggle100;
+        private System.Windows.Forms.Label Header100;
+        private System.Windows.Forms.Timer AlertChecks;
+        private System.Windows.Forms.Button ToggleRemain;
+        private System.Windows.Forms.Label RemainHeader;
+        private System.Windows.Forms.Button ToggleEnableAlerts;
+        private System.Windows.Forms.Label AlertsEnableHeader;
+        private System.Windows.Forms.Label HomePercent;
+        private System.Windows.Forms.Timer GetPercent;
     }
 }
 

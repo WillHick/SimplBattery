@@ -49,6 +49,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alerts\Alert100.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alerts\Alert100.Designer.cs">
+      <DependentUpon>Alert100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alerts\Alert25.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alerts\Alert25.Designer.cs">
+      <DependentUpon>Alert25.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alerts\Alert50.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alerts\Alert50.Designer.cs">
+      <DependentUpon>Alert50.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alerts\Alert75.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alerts\Alert75.Designer.cs">
+      <DependentUpon>Alert75.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainUI.cs">
       <SubType>Form</SubType>
     </Compile>

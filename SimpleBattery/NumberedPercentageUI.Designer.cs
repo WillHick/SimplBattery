@@ -40,7 +40,7 @@ namespace SimplBattery
             this.Output.BackColor = System.Drawing.Color.Transparent;
             this.Output.Font = new System.Drawing.Font("Segoe UI Symbol", 35F);
             this.Output.ForeColor = System.Drawing.Color.White;
-            this.Output.Location = new System.Drawing.Point(11, 4);
+            this.Output.Location = new System.Drawing.Point(13, 4);
             this.Output.Name = "Output";
             this.Output.Size = new System.Drawing.Size(173, 93);
             this.Output.TabIndex = 0;
@@ -56,7 +56,7 @@ namespace SimplBattery
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
-            this.ClientSize = new System.Drawing.Size(227, 108);
+            this.ClientSize = new System.Drawing.Size(223, 104);
             this.ControlBox = false;
             this.Controls.Add(this.Output);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

@@ -25,6 +25,9 @@ namespace SimpleBattery
         {
             this.CenterToScreen();
 
+            AlertChecks.Start();
+            GetPercent.Start();
+
             //Not Visible            
             NPUI.Visible = false;
             VBUI.Visible = false;
@@ -79,7 +82,50 @@ namespace SimpleBattery
         }
         private void Github_Click(object sender, EventArgs e)
         {
-            Process.Start("");
-        }        
+            Process.Start("https://github.com/willhick/SimplBattery");
+        }
+        private void Help_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Developed By WillHick" + Environment.NewLine + "Icons By icons8 (Icons Links Are On The Github ReadME - As The Site Says)");
+        }
+
+        //Ticks
+        private void AlertChecks_Tick(object sender, EventArgs e)
+        {
+            //Set Output
+            PowerStatus PS = SystemInformation.PowerStatus;
+            int PSOutput = (int)(PS.BatteryLifePercent * 100);
+
+            if (PSOutput == 100)
+            {
+                MessageBox.Show("100");
+            }
+            if (PSOutput == 75)
+            {
+                MessageBox.Show("75");
+            }
+            if (PSOutput == 50)
+            {
+                MessageBox.Show("50");
+            }
+            if (PSOutput == 25)
+            {
+                MessageBox.Show("25");
+            }
+        }
+
+        private void GetPercent_Tick(object sender, EventArgs e)
+        {
+            //Set Output
+            PowerStatus PS = SystemInformation.PowerStatus;
+            int PSOutput = (int)(PS.BatteryLifePercent * 100);
+
+            HomePercent.Text = (PSOutput + "%");
+
+            if (HomePercent.Text == "100%")
+            {
+                //Shift POS
+            }
+        }
     }
 }
