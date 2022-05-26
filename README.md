@@ -12,6 +12,6 @@ To come next will be the option to see battery charge status and battery informa
 The application is built and tested on Windows 10 for a laptop, not a standalone Desktop.
 
 # Credits
-Icons By icons8 (Also Linked In Application As Stated On The Site)
+Icons By icons8 (https://icons8.com) (Also Linked In Application As Stated On The Site)
 - https://icons8.com/icon/88034/toggle-on
 - https://icons8.com/icon/20006/toggle-off
